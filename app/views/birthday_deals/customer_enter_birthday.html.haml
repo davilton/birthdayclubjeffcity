@@ -1,0 +1,4 @@
+%h1 Enter Birthday
+= link_to 'Sign Out', destroy_user_session_path, method: :delete
+= current_user.email
+= current_user.birthdate

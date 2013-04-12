@@ -1,0 +1,159 @@
+LOG:  database system was shut down at 2013-03-10 16:30:35 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "admin" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  database "createdb" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+FATAL:  database "createuser" does not exist
+ERROR:  role "admin" already exists
+STATEMENT:  CREATE ROLE admin SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
+	
+FATAL:  role "amdin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  role "davilton_development" does not exist
+FATAL:  database "users" does not exist
+FATAL:  database "du" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  role "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "amdin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_development" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_test" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_production" ENCODING = 'unicode'
+ERROR:  cannot drop a template database
+STATEMENT:  DROP DATABASE template1;
+	
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_test" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_production" ENCODING = 'unicode'
+ERROR:  database "birthdayclubjeffcity_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE birthdayclubjeffcity_development;
+	
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_development" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_test" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+ERROR:  permission denied to create database
+STATEMENT:  CREATE DATABASE "birthdayclubjeffcity_production" ENCODING = 'unicode'
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "admin" does not exist
+FATAL:  database "birthdayclubjeffcity_development" does not exist
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+FATAL:  database "birthdayclubjeffcity" does not exist
+ERROR:  relation "users" does not exist at character 315
+STATEMENT:              SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+	              FROM pg_attribute a LEFT JOIN pg_attrdef d
+	                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	             WHERE a.attrelid = '"users"'::regclass
+	               AND a.attnum > 0 AND NOT a.attisdropped
+	             ORDER BY a.attnum
+	
+ERROR:  relation "users" does not exist at character 315
+STATEMENT:              SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+	              FROM pg_attribute a LEFT JOIN pg_attrdef d
+	                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	             WHERE a.attrelid = '"users"'::regclass
+	               AND a.attnum > 0 AND NOT a.attisdropped
+	             ORDER BY a.attnum
+	
+ERROR:  column "email" of relation "users" already exists
+STATEMENT:  ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+ERROR:  column "email" of relation "users" already exists
+STATEMENT:  ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+FATAL:  terminating autovacuum process due to administrator command
+ERROR:  database "birthdayclubjeffcity_development" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "birthdayclubjeffcity_development"
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+ERROR:  column "email" of relation "users" already exists
+STATEMENT:  ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+ERROR:  database "birthdayclubjeffcity_development" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "birthdayclubjeffcity_development"
+FATAL:  database "birthdayclubjeffcity_test" does not exist
+ERROR:  operator does not exist: ` date at character 71
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT COUNT(*) FROM "users"  WHERE "users"."id" = 2 AND (DATE_FORMAT(`birthdate`, '%m%d') >= "0328" AND DATE_FORMAT(`birthdate`, '%m%d') <= "0427")
+ERROR:  operator does not exist: ` date at character 71
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT COUNT(*) FROM "users"  WHERE "users"."id" = 2 AND (DATE_FORMAT(`birthdate`, '%m%d') >= "0328" AND DATE_FORMAT(`birthdate`, '%m%d') <= "0427")
+ERROR:  operator does not exist: ` date at character 71
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT COUNT(*) FROM "users"  WHERE "users"."id" = 2 AND (DATE_FORMAT(`birthdate`, '%m%d') >= "0328" AND DATE_FORMAT(`birthdate`, '%m%d') <= "0427")
+ERROR:  syntax error at or near "select" at character 39
+STATEMENT:  select to_char(birthdate, 'MMDD') >= 
+	select to_char(birthdate, 'MMDD') >= "0101" from users
+	;
+ERROR:  operator does not exist: text >= integer at character 35
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  select to_char(birthdate, 'MMDD') >= 0101 from users
+	;
+ERROR:  function to_date(date, unknown) does not exist at character 8
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  select to_date(birthdate, 'MMDD') >= 0101 from users
+	;
+ERROR:  syntax error at or near "select" at character 39
+STATEMENT:  select to_date(birthdate, 'MMDD') >= 
+	select to_date(birthdate, 'MMDD') from users;
+ERROR:  invalid value "bi" for "MM"
+DETAIL:  Value must be an integer.
+STATEMENT:  select to_date('birthdate', 'MMDD') from users;
+ERROR:  syntax error at or near "fom" at character 10
+STATEMENT:  select * fom users;
+ERROR:  invalid value "bi" for "MM"
+DETAIL:  Value must be an integer.
+STATEMENT:  select to_date('birthdate', 'MMDD') from users;
+ERROR:  function to_date(date, unknown) does not exist at character 8
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  select to_date(birthdate, 'MMDD') from users;

@@ -1,0 +1,29 @@
+/ <%= form_for(@user) do |f| %>
+/   <% if @user.errors.any? %>
+/     <div id="error_explanation">
+/       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+/       <ul>
+/       <% @user.errors.full_messages.each do |msg| %>
+/         <li><%= msg %></li>
+/       <% end %>
+/       </ul>
+/     </div>
+/   <% end %>
+
+/   <div class="actions">
+/     <%= f.submit %>
+/   </div>
+/ <% end %>
+
+= semantic_form_for(@user) do |f|
+  = devise_error_messages!
+  = f.inputs do
+    = f.input :first_name, label: false, required: false, placeholder: @user.first_name
+    = f.input :last_name, label: false, required: false, placeholder: @user.last_name
+    = f.input :email, label: false, required: false, placeholder: @user.email
+    = @user_bday
+    = f.input :password, :label => false, :required => false, placeholder: 'New Password:'
+    = f.input :password_confirmation, :label => false, :required => false, placeholder: 'Confirm Password:'
+
+  = f.actions do
+    = f.action :submit  

@@ -1,14 +1,14 @@
 class BirthdayDealsController < ApplicationController
   
-  before_filter :authenticate_user!, only: [:birthday, :not_birthday]
+  # before_filter :authenticate_user!, only: [:birthday, :not_birthday]
   before_filter :verify_login_and_birthday
 
   respond_to :html, :json
 
   def index
-    # if user_signed_in?
-    #   render action: 'index_view_birthday_deals'
-    # end  
+    if user_signed_in?
+      render action: 'index_view_birthday_deals'
+    end  
   end
 
   def account

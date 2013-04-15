@@ -2,7 +2,7 @@ Birthdayclubjeffcity::Application.routes.draw do
   root :to => 'birthday_deals#index'
   match '/' => "birthday_deals#index", as: 'birthday_deals'
   devise_for :users
-  # resources :users
+  resources :users, only: [:show, :edit, :update]
   match '/account' => "birthday_deals#account", as: 'account'
 
   # The priority is based upon order of creation:

@@ -157,3 +157,18 @@ STATEMENT:  select to_date('birthdate', 'MMDD') from users;
 ERROR:  function to_date(date, unknown) does not exist at character 8
 HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
 STATEMENT:  select to_date(birthdate, 'MMDD') from users;
+ERROR:  syntax error at or near "'birthdate'" at character 37
+STATEMENT:  select birthdate from users to_char('birthdate','MMDD');
+ERROR:  function to_date(date, unknown) does not exist at character 8
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  select to_date(birthdate, 'MMDD') from users;
+ERROR:  syntax error at or near "'birthdate'" at character 37
+STATEMENT:  select birthdate from users to_char('birthdate','MMDD');
+ERROR:  function to_char(unknown, unknown) is not unique at character 8
+HINT:  Could not choose a best candidate function. You might need to add explicit type casts.
+STATEMENT:  select to_char('birthdate','MMDD') from users;
+ERROR:  syntax error at or near "MMDD" at character 95
+STATEMENT:  select to_char(birthdate,'MMDD') from users where birthdate> '0101;
+	select to_char(birthdate,'MMDD') from users where birthdate '1005;
+ERROR:  syntax error at or near "from" at character 8
+STATEMENT:  select from users where to_char(birthdate, 'MMDD') < '0101';

@@ -1,3 +1,5 @@
+
+
 class BirthdayDealsController < ApplicationController
   
   # before_filter :authenticate_user!, only: [:birthday, :not_birthday]
@@ -7,6 +9,8 @@ class BirthdayDealsController < ApplicationController
 
   def index
     if user_signed_in?
+      response = Requester.test
+      @response = ActiveSupport::JSON.decode(response)
       render action: 'index_view_birthday_deals'
     end  
   end

@@ -9,6 +9,14 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :encrypted_password
   # attr_accessible :title, :body
 
+  def birthday
+    bday = self.test_user? ? Date.today : self.birthdate
+    bday.strftime('%B %d')
+  end
+
+  def birthdate=(birthdate)
+    write_attribute(:birthdate, birthdate)
+  end
 
   def adjusted_birthday
     birthdate = self.test_user? ? Date.today : self.birthdate
@@ -46,22 +54,26 @@ class User < ActiveRecord::Base
     date_start = (Date.today - 15.days)
     date_end = (Date.today + 15.days)
     return true
-    # if date_end.strftime('%m%d') < date_start.strftime('%m%d') # Birthday overlaps new year 
+    if date_end.strftime('%m%d') < date_start.strftime('%m%d') # Birthday overlaps new year 
     ### MYSQL
     #   where_sql = "(DATE_FORMAT(`birthdate`, '%m%d') >= \"0101\""
     #   where_sql << " AND DATE_FORMAT(`birthdate`, '%m%d') <= \"#{date_end.strftime('%m%d')}\")"
     #   where_sql << " OR (DATE_FORMAT(`birthdate`, '%m%d') >= \"#{date_start.strftime('%m%d')}\""
     #   where_sql << " AND DATE_FORMAT(`birthdate`, '%m%d') <= \"1231\")"
-    ###
-    ## PSQL
-    #   where_sql = "(to_char(birthdate, 'MMDD') >= \\"0101\\""
-    #   where_sql << " AND to_char(birthdate, 'MMDD') <= \"#{date_end.strftime('%m%d')}\")"
-    ##
     #
     # else
     #   where_sql = "DATE_FORMAT(`birthdate`, '%m%d') >= \"#{date_start.strftime('%m%d')}\" AND DATE_FORMAT(`birthdate`, '%m%d') <= \"#{date_end.strftime('%m%d')}\""
     # end
-    # User.where(id: self.id).where(where_sql).count > 0 ? true : false
+    ###
+    ## PSQL
+      where_sql = "(to_char(birthdate, 'MMDD') >= \"0101\""
+      where_sql << " AND to_char(birthdate, 'MMDD') <= \"#{date_end.strftime('%m%d')}\")"
+      where_sql << " OR (to_char(birthdate, 'MMDD') >= \"#{date_start.strftime('%m%d')}\""
+      where_sql << " AND to_char(birthdate, 'MMDD') <= \"1231\")"  
+    else
+      where_sql = "DATE_FORMAT(`birthdate`, '%m%d') >= \"#{date_start.strftime('%m%d')}\" AND DATE_FORMAT(`birthdate`, '%m%d') <= \"#{date_end.strftime('%m%d')}\""
+    end
+    User.where(id: self.id).where(where_sql).count > 0 ? true : false
   end
 
   def test_user?

@@ -172,3 +172,49 @@ STATEMENT:  select to_char(birthdate,'MMDD') from users where birthdate> '0101;
 	select to_char(birthdate,'MMDD') from users where birthdate '1005;
 ERROR:  syntax error at or near "from" at character 8
 STATEMENT:  select from users where to_char(birthdate, 'MMDD') < '0101';
+ERROR:  column "birthday_id_id" of relation "birthday_deal_vouchers" does not exist at character 35
+STATEMENT:  update birthday_deal_vouchers set birthday_id_id=1 where id=1;
+ERROR:  column "birthday_id" of relation "birthday_deal_vouchers" does not exist at character 35
+STATEMENT:  update birthday_deal_vouchers set birthday_id=1 where id=1;
+ERROR:  syntax error at or near "select" at character 32
+STATEMENT:  select * from users where id=3
+	select * from users where id=3;
+FATAL:  database "admin" does not exist
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 1
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 1
+ERROR:  invalid input syntax for type boolean: "approved" at character 33
+STATEMENT:  update birthday_deals set state='approved' and location_id=1 where id=2;
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 1
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 1
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 3
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  relation "birthday_deals_company_locations" does not exist at character 66
+STATEMENT:  SELECT "company_locations".* FROM "company_locations" INNER JOIN "birthday_deals_company_locations" ON "company_locations"."id" = "birthday_deals_company_locations"."company_location_id" WHERE "birthday_deals_company_locations"."birthday_deal_id" = 4
+ERROR:  invalid input syntax for type date: "" at character 28
+STATEMENT:  update users set birthdate='' where id=4;
+ERROR:  invalid input syntax for type date: " " at character 28
+STATEMENT:  update users set birthdate=' ' where id=4;
+ERROR:  column "nil" does not exist at character 28
+STATEMENT:  update users set birthdate=nil where id=4;
+ERROR:  syntax error at or near "to" at character 28
+STATEMENT:  update users set birthdate to nil where id=4;
+ERROR:  syntax error at or near "is" at character 28
+STATEMENT:  update users set birthdate is nil where id=4;
+ERROR:  syntax error at or near "to" at character 28
+STATEMENT:  update users set birthdate to null where id=4;
+ERROR:  syntax error at or near ";" at character 26
+STATEMENT:  select * from users where;

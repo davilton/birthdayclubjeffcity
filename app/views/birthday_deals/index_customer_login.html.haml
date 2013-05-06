@@ -1,4 +1,6 @@
 %h1
-  Birthday Club  
+  Birthday Club
+- if current_user 
+  = link_to current_user.email, destroy_user_session_path, method: :delete  
 = render partial: 'devise/sessions/new' 
 = render partial: 'devise/registrations/new' 

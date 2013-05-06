@@ -1,0 +1,21 @@
+%h1
+  = @company.name
+%p
+  Phone: 
+  = @company.phone
+%p
+  Address:
+  = @company.street1
+= @company.street2
+%p
+  = display_city_state(@company.city, @company.state)
+  = @company.postal_code
+%p= @company.archived
+
+
+- if @company.company_locations.count > 0
+  %h3 
+    Company Locations
+  - @company.company_locations.each do |company_location|
+    = display_company_location(company_location)
+    = link_to 'Edit', edit_dashboard_company_company_location_path(company_location)

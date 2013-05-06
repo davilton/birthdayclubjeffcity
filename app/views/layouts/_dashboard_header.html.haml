@@ -1,0 +1,17 @@
+!!! 
+%html
+  %head
+    %title The Birthday Club Manager
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{:content => "text/javascript", "http-equiv" => "content-script-type"}/
+    / = stylesheet_link_tag 'dashboard'
+    / = stylesheet_link_tag 'dashboard/dashboard'
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tags
+    = javascript_include_tag "application"
+    = javascript_include_tag "dashboard"
+  %body
+    = link_to 'Companies'
+    = link_to 'Locations'
+    = link_to 'Birthday Deals'  
+    = link_to('Sign Out', destroy_user_session_path, method: :delete)

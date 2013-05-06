@@ -26,6 +26,16 @@ gem 'devise'
 gem 'debugger'
 gem 'formtastic'
 gem 'httparty'
+gem 'rails_admin'
+# gem 'ruby-graphviz' 
+gem 'state_machine'
+gem 'state_machine-audit_trail'
+gem 'prawn'
+gem 'barby'
+gem 'geoip'                # provides IP address to lat/long lookup using MaxMind GeoLiteCity.dat db
+gem 'geokit-rails3'        # provides distance calculations based on lat/long geometry
+gem 'carrierwave'
+gem 'rmagick'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

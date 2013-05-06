@@ -1,13 +1,33 @@
 class User < ActiveRecord::Base
+  has_many :birthday_deal_vouchers
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_presence_of     :first_name, :last_name, :message => "Required Field"
+  validates_presence_of     :password,:message => "Required Field",                   :if => :password_required?
+  validates_presence_of     :password_confirmation, :message => "Required Field",     :if => :password_required?
+  validates_length_of       :password, :within => 4..40, :message => 'Is Too Short (Minimum Is 4 Characters)',  :if => :password_required?
+  validates_confirmation_of :password, :message => "Does Not Match Confirmation"
+  validates :email, :uniqueness => { :case_sensitive => false, :message => 'The email you entered is associated with another account'},
+                    :length => { :within => 3..100, :message => 'Invalid Length' },
+                    :presence => {:message => "Required Field"}
+  validates_length_of       :email,    :within => 3..100, :allow_nil => true, :allow_blank => true
+
+  validates_presence_of     :email, :message => "Required Field"
+  # validates_presence_of     :birthdate, :message => "Required Field"
+  validates_presence_of :birthdate
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :encrypted_password
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :encrypted_password, :birthdate
   # attr_accessible :title, :body
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
   def birthday
     bday = self.test_user? ? Date.today : self.birthdate

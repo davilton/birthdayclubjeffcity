@@ -11,7 +11,106 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411212502) do
+ActiveRecord::Schema.define(:version => 20130424140808) do
+
+  create_table "birthday_deal_state_transitions", :force => true do |t|
+    t.integer  "birthday_deal_id"
+    t.string   "event"
+    t.string   "from"
+    t.string   "to"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "birthday_deal_voucher_state_transitions", :force => true do |t|
+    t.integer  "birthday_deal_voucher_id"
+    t.string   "event"
+    t.string   "from"
+    t.string   "to"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  create_table "birthday_deal_vouchers", :force => true do |t|
+    t.integer  "birthday_deal_id"
+    t.integer  "user_id"
+    t.string   "verification_number"
+    t.date     "valid_on"
+    t.date     "good_through"
+    t.string   "state"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  create_table "birthday_deals", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "value"
+    t.string   "hook"
+    t.string   "restrictions"
+    t.string   "how_to_redeem"
+    t.string   "slug"
+    t.string   "state"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "location_id"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
+    t.boolean  "archived"
+    t.string   "url"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "location_id"
+  end
+
+  create_table "company_locations", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
+    t.integer  "company_id"
+    t.integer  "location_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "lat"
+    t.string   "lng"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "rails_admin_histories", :force => true do |t|
+    t.text     "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 8
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                             :null => false
@@ -29,6 +128,7 @@ ActiveRecord::Schema.define(:version => 20130411212502) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

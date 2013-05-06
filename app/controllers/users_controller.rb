@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   # GET /users.json
    def index
     @users = User.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @users }
@@ -37,14 +36,14 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-    @user_bday = @user.birthdate.strftime('%m-%d-%Y')
+    @user_bday = @user.birthdate.strftime('%m-%d-%Y') if @user.birthdate
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(params[:user])
-
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -60,6 +59,12 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
+    # if params[:customer]
+    #   month =  params[:customer]['birthdate(2i)'].to_i
+    #   day = params[:customer]['birthdate(3i)'].to_i
+    #   year = params[:customer]['birthdate(1i)'].to_i
+    #   @user.birthdate = Date.new(year,month,day).to_s(:db)
+    # end 
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

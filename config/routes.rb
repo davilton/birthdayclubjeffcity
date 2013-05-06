@@ -1,10 +1,58 @@
 Birthdayclubjeffcity::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  match '/dashboard' => 'dashboard/locations#index'
   root :to => 'birthday_deals#index'
   match '/' => "birthday_deals#index", as: 'birthday_deals'
   devise_for :users
-  resources :users, only: [:show, :edit, :update]
-  match '/account' => "birthday_deals#account", as: 'account'
+  # devise_for :users, :path => '', :path_names => { :sign_in => "sign_in", :sign_out => "sign_out", :sign_up => "sign_up" }
+  # resources :users, only: [:show, :edit, :update]
+  match '/my_account' => "birthday_deals#account", as: 'account' 
 
+  put '/add_birthday_to_user' => 'birthday_deals#add_birthday_to_user'
+  match '/' => "birthday_deals#index", as: 'deals'
+  resources :birthday_deal_vouchers, only: [:show, :index], path: 'birthday_deals' do
+    member do
+      put :trash
+      put :keep
+      get :print
+    end
+  end
+
+  match '/:geolocation' => 'birthday_deals#index'
+
+  
+  namespace :dashboard do
+    resources :companies do  
+      member do
+        get :archive 
+        get :unarchive
+      end  
+      collection do
+        get :archived
+        match :search
+      end 
+      resources :company_locations, controller: 'companies/company_locations'
+    end   
+
+    resources :birthday_deal_vouchers, only: [:show, :index], as: "deal_vouchers", path: 'birthday_deals' do
+      member do
+        put :trash
+        put :keep
+        get :print
+      end
+    end
+
+    resources :locations do
+      resources :birthday_deals, shallow: true do
+        member do
+          put :submit_for_approval
+          put :withdraw
+          put :reject
+          put :approve
+        end
+      end
+    end
+  end  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

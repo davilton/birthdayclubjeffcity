@@ -8,9 +8,9 @@
       = f.input :email, :label => false, :required => true, placeholder: 'E-Mail:'
       = f.input :password, :label => false, :required => true, placeholder: 'Password:'
       = f.input :password_confirmation, :label => false, :required => true, placeholder: 'Confirm Password:'
-      = text_field_tag "customer[birthdate(2i)]", nil, placeholder: 'MM', size: 2, maxlength: 2, class: 'month'
-      = text_field_tag "customer[birthdate(3i)]", nil, placeholder: 'DD', size: 2, maxlength: 2, class: 'day'
-      = text_field_tag "customer[birthdate(1i)]", nil, placeholder: 'YYYY', size: 2, maxlength: 4, class: 'year'
+      = text_field_tag "user[birthdate(2i)]", nil, placeholder: 'MM', size: 2, maxlength: 2, class: 'month'
+      = text_field_tag "user[birthdate(3i)]", nil, placeholder: 'DD', size: 2, maxlength: 2, class: 'day'
+      = text_field_tag "user[birthdate(1i)]", nil, placeholder: 'YYYY', size: 2, maxlength: 4, class: 'year'
     = f.actions do
       = f.action :submit, :as => :button, :label => 'Sign Up',  :button_html => { :class => 'form-button orange', :value => 'Sign_Up'}
   Already have an account?

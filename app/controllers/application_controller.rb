@@ -2,7 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def admin_login_required
-    !!current_user && current_user.admin?  
+    unless current_user && current_user.admin?
+      flash[:error] = "You are not an admin."
+      redirect_to root_url  
+    end  
   end
 
   def customer_logged_in?
@@ -42,7 +45,4 @@ class ApplicationController < ActionController::Base
       @current_location ||= (location_from_params || location_from_session || location_from_ip || default_location)
   end
 
-  def authenticate_admin!
-
-  end
 end

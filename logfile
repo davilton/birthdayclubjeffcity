@@ -218,3 +218,6 @@ ERROR:  syntax error at or near "to" at character 28
 STATEMENT:  update users set birthdate to null where id=4;
 ERROR:  syntax error at or near ";" at character 26
 STATEMENT:  select * from users where;
+ERROR:  syntax error at or near "?" at character 29
+STATEMENT:  select * from birthday_deals?
+	select * from birthday_deals;

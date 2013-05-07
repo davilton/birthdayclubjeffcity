@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
   end
 
   def default_location
-    Location.find_by_slug('columbia-mo')
+    Location.find_by_slug('jefferson-city-mo')
   end
 
   def location_from_ip

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424140808) do
+ActiveRecord::Schema.define(:version => 20130507160858) do
 
   create_table "birthday_deal_state_transitions", :force => true do |t|
     t.integer  "birthday_deal_id"
@@ -56,6 +56,16 @@ ActiveRecord::Schema.define(:version => 20130424140808) do
     t.date     "end_date"
     t.integer  "location_id"
   end
+
+  create_table "birthday_deals_company_locations", :id => false, :force => true do |t|
+    t.integer  "birthday_deal_id"
+    t.integer  "company_location_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "birthday_deals_company_locations", ["birthday_deal_id"], :name => "index_birthday_deals_company_locations_on_birthday_deal_id"
+  add_index "birthday_deals_company_locations", ["company_location_id"], :name => "index_birthday_deals_company_locations_on_company_location_id"
 
   create_table "companies", :force => true do |t|
     t.string   "name"

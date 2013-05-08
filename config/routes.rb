@@ -1,6 +1,8 @@
 Birthdayclubjeffcity::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   match '/dashboard' => 'dashboard/locations#index'
+  # match '/users/sign_in' => "birthday_deals#index"
+  # match '/users/sign_up' => "birthday_deals#index"
   root :to => 'birthday_deals#index'
   match '/' => "birthday_deals#index", as: 'birthday_deals'
   devise_for :users
@@ -22,6 +24,7 @@ Birthdayclubjeffcity::Application.routes.draw do
 
   
   namespace :dashboard do
+    resources :users  
     resources :companies do  
       member do
         get :archive 

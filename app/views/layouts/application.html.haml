@@ -1,10 +1,9 @@
 !!!
 %html
   %head
-    %title Birthday Club!
-    = stylesheet_link_tag    "application", :media => "all"
+    %title The Birthday Club!
+    = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = render 'layouts/messages'
     = yield

@@ -1,25 +1,31 @@
-%h1 My Account
-= link_to 'Edit My Info', edit_user_registration_path
-%p #{current_user.first_name} #{current_user.last_name} 
-%p= @user.email
-Birthday: 
-= @user.birthdate.strftime('%m/%d/%Y') unless @user.birthdate.nil?
-
-- if not @birthday_vouchers.empty?
-  %table
-    %thead
-      %tr
-        %th Company
-        %th Birthday Deal
-        %th Status
-        %th Expires On
-        %th
-    %tbody  
-    - @birthday_vouchers.each do |deal|
-      %tr
-        %td= deal.company.name
-        %td= deal.hook
-        %td= deal.state
-        %td= deal.good_through
-        %td= link_to 'Print Voucher', print_birthday_deal_voucher_path(deal)
+.cell#customer_signin
+  .floater
+  .container 
+    .left
+      .white-box
       
+        %h1 My Account
+        = link_to 'Edit My Info', edit_user_registration_path
+        %p #{current_user.first_name} #{current_user.last_name} 
+        %p= @user.email
+        Birthday: 
+        = @user.birthdate.strftime('%m/%d/%Y') unless @user.birthdate.nil?
+
+        - if not @birthday_vouchers.empty?
+          %table
+            %thead
+              %tr
+                %th Company
+                %th Birthday Deal
+                %th Status
+                %th Expires On
+                %th
+            %tbody  
+            - @birthday_vouchers.each do |deal|
+              %tr
+                %td= deal.company.name
+                %td= deal.hook
+                %td= deal.state
+                %td= deal.good_through
+                %td= link_to 'Print Voucher', print_birthday_deal_voucher_path(deal)
+              

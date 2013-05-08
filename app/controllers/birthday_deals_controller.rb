@@ -2,6 +2,8 @@ class BirthdayDealsController < ApplicationController
   
   before_filter :verify_login_and_birthday, except: [:add_birthday_to_user]
 
+  layout 'birthday'
+
   respond_to :html, :json
 
   def account

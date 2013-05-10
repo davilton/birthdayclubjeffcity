@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -58,5 +59,14 @@ module Birthdayclubjeffcity
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Override Devise layouts
+    config.to_prepare do
+      Devise::SessionsController.layout "birthday"
+      Devise::RegistrationsController.layout "birthday"
+      Devise::ConfirmationsController.layout "birthday"
+      Devise::UnlocksController.layout "birthday"
+      Devise::PasswordsController.layout "birthday"
+    end
   end
 end

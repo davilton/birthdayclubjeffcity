@@ -3,8 +3,6 @@
   .container 
     .left
       .white-box
-      
-        %h1 My Account
         = link_to 'Edit My Info', edit_user_registration_path
         %p #{current_user.first_name} #{current_user.last_name} 
         %p= @user.email

@@ -18,6 +18,7 @@ def to_pdf(voucher)
     # relatively using calculations from +bounds+.
     #
     # logo = "#{Rails.root}/public/images/birthday-logo.png"
+    logo = "#{Rails.root}/app/assets/images/birthday_deals/voucher-birthday-logo.png"
 
     birthday_deal = voucher.birthday_deal
     bounding_box [20,bounds.height], :width => 460 do
@@ -26,7 +27,7 @@ def to_pdf(voucher)
         move_down 10
         indent(10) do
           bounding_box [0,0], :width => 440 do
-            # image logo, :at => [0, 0], scale: 0.5
+            image logo, :at => [0, 0], scale: 0.5
           end
 
 

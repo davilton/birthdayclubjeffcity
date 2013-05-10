@@ -209,6 +209,7 @@ DEPENDENCIES
   httparty
   jquery-qtip2-rails
   jquery-rails
+  jquery-ui-rails
   pg
   prawn
   rails (= 3.2.12)

@@ -16,7 +16,7 @@ group :assets do
   gem 'compass-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'jquery-ui-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -37,6 +37,7 @@ gem 'geokit-rails3'        # provides distance calculations based on lat/long ge
 gem 'carrierwave'
 gem 'rmagick'
 gem 'jquery-qtip2-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

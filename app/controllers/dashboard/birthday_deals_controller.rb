@@ -136,9 +136,8 @@ class Dashboard::BirthdayDealsController < ApplicationController
 
   def set_form_variables
     @birthday_deal = (BirthdayDeal.find(params[:id]) if params[:id].present?)
-    # @location = @birthday_deal.try(:location) || (Location.find(params[:location_id]) if params[:location_id])
-    @location = Location.find(1)
-    @companies = Company.where('location_id = ?', 1).order('name asc')
+    @location = @birthday_deal.try(:location) || (Location.find(params[:location_id]) if params[:location_id])
+    @companies = Company.order('name asc')
     @company = @birthday_deal.try(:company)
     @model = 'birthday_deal'
   end

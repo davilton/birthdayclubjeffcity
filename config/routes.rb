@@ -7,7 +7,7 @@ Birthdayclubjeffcity::Application.routes.draw do
   match '/' => "birthday_deals#index", as: 'birthday_deals'
   devise_for :users
   # devise_for :users, :path => '', :path_names => { :sign_in => "sign_in", :sign_out => "sign_out", :sign_up => "sign_up" }
-  # resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update]
   match '/my_account' => "birthday_deals#account", as: 'account' 
 
   put '/add_birthday_to_user' => 'birthday_deals#add_birthday_to_user'
@@ -26,6 +26,7 @@ Birthdayclubjeffcity::Application.routes.draw do
   namespace :dashboard do
     resources :users  
     resources :companies do  
+      resources :company_locations
       member do
         get :archive 
         get :unarchive
@@ -34,7 +35,7 @@ Birthdayclubjeffcity::Application.routes.draw do
         get :archived
         match :search
       end 
-      resources :company_locations, controller: 'companies/company_locations'
+      
     end   
 
     resources :birthday_deal_vouchers, only: [:show, :index], as: "deal_vouchers", path: 'birthday_deals' do

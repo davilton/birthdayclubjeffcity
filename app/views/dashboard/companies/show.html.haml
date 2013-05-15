@@ -12,10 +12,15 @@
   = @company.postal_code
 %p= @company.archived
 
+- 3.times do
+  %br
 
-- if @company.company_locations.count > 0
+= button_to 'Add a Location'#, new_dashboard_company_company_location_path
+- if !@company.company_locations.empty?
   %h3 
     Company Locations
   - @company.company_locations.each do |company_location|
     = display_company_location(company_location)
     = link_to 'Edit', edit_dashboard_company_company_location_path(company_location)
+- else
+  No company locations    

@@ -9,7 +9,7 @@
     - @companies.each do |company|
       %tr
         %td= image_tag company.image_url(:thumb) if company.image?
-        %td.main= link_to company.name, edit_dashboard_company_path(company)
+        %td.main= link_to company.name, dashboard_company_path(company)
         / %td=# display_company_location(company)
         %td= company.location_id
         %td= company.phone

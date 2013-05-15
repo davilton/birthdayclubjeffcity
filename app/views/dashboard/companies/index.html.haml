@@ -5,7 +5,7 @@
   /     Search: 
   /     = text_field :search, :query, autofocus: true 
   /     = submit_tag "search"
-  .page_header_right= button_to "Add a company", new_dashboard_company_path
+  .page_header_right= button_to "Add a company", new_dashboard_company_path, method: :get
 #page_main
   = render partial: "list" #, locals: {companies: @companies}
 / #new_company_form_holder.modal{style: "display: none;"}

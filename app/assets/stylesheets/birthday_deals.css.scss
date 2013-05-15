@@ -36,19 +36,11 @@ body {
 } 
 
 #main {
-
-
-
-
   position: relative;
   width: 960px;
   height: 100%;
   display: block;
   margin: 0 auto;
-
-
-
-
   position: relative;
 }
 
@@ -273,6 +265,15 @@ body {
   text-align: center;
   padding: 10px;
   
+}
+
+#my_birthday_deals{
+  .white-box {
+    padding: 20px;
+    margin: 120px 10px 10px; 
+    h2{font-size: 24px; padding: 0px 0px 40px;}
+    li{display: inline; padding: 0px 5px;}
+  }
 }
 
 .white-box {
@@ -508,6 +509,19 @@ body {
 
 }
 
+table {
+  width: 750px;
+  margin: auto;
+  .colored_row{background: #eee;}
+  .blank_row{background: #fff;}
+  th {
+    font-weight: bold;
+  }
+}
+td,th {
+  padding: 5px 10px;
+}
+
 .cell {
   height: 100%;
 
@@ -571,6 +585,7 @@ body {
       clear: both;
     }
   }
+
 
   &#customer_signin, &#customer_signup, &#customer_birthday, &#all_opened {
     position: relative;

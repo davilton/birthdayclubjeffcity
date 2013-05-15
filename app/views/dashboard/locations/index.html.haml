@@ -2,7 +2,7 @@
   #page_header_left
     %h2 Markets
   #page_header_right
-    = button_to "Add a market", new_dashboard_location_path
+    = button_to "Add a market", new_dashboard_location_path, method: :get
 
 #page_main
   = render partial: "list"

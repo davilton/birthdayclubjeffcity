@@ -42,6 +42,10 @@ module ApplicationHelper
     display_full_location(company.street1, company.street2, company.city, company.state, company.postal_code)
   end
 
-
+  def alternate_table_row(str1='colored_row', str2='blank_row')
+    @alternating_row = false if @alternating_row.nil?
+    @alternating_row = !@alternating_row
+    @alternating_row ? str1 : str2        
+  end
 
 end

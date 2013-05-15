@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!  
   
+  layout 'birthday'
+
   # GET /users
   # GET /users.json
    def index

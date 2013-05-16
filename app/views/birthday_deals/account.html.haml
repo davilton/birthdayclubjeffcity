@@ -20,14 +20,8 @@
           
           - @birthday_vouchers.each do |deal|
             %tr{ class: alternate_table_row } 
-              %td= image_tag deal.company.image_url(:thumb) if deal.company.image?
+              %td= image_tag deal.company.image_url(:deal_image) if deal.company.image?
               %td= deal.hook
               %td= deal.state
-              %td= deal.good_through.to_s(:default)
+              %td= deal.good_through.to_s
               %td= link_to 'Print Voucher', print_birthday_deal_voucher_path(deal)
-      
-/ .right
-/ .white-box
-/   %p= link_to 'Birthday Club!'
-/   %p= link_to 'My Info'
-/   %p= link_to 'Edit Account', edit_user_registration_path          

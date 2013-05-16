@@ -16,6 +16,9 @@ th {
   background-color: #333;
   color: #fff;
 }
+
+nav li { padding: 0px 10px; display: inline;}
+
 #main {
   position: relative;
   width: 960px;

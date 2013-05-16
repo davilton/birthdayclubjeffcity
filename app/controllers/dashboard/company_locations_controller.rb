@@ -1,7 +1,5 @@
 class Dashboard::CompanyLocationsController < ApplicationController
-  before_filter :admin_login_required
-
-  before_filter :get_company
+  before_filter :admin_login_required, :get_company
 
   respond_to :html, :json
 
@@ -24,7 +22,7 @@ class Dashboard::CompanyLocationsController < ApplicationController
     @company_location = @company.company_locations.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @company_locations }
+      format.xml  { render :xml => @company_location }
     end
   end
 
@@ -33,15 +31,9 @@ class Dashboard::CompanyLocationsController < ApplicationController
   def new
     @company_location = @company.company_locations.new
 
-    # if params[:status_id]
-    #   @company.status_id = params[:status_id]
-    # else
-    #   @company.status_id = 1
-    # end
-
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @company }
+      format.xml  { render :xml => @company_location }
     end
   end
 
@@ -58,16 +50,16 @@ class Dashboard::CompanyLocationsController < ApplicationController
   # POST /companies
   # POST /companies.xml
   def create
-    @company_location = @company.new(params[:company_location])
+    @company_location = @company.company_locations.new(params[:company_location])
 
     respond_to do |format|
       if @company_location.save
         flash[:notice] = 'Company Location was successfully created.'
-        format.html { redirect_to(dashboard_company_path(@company)) }
-        format.xml  { render :xml => @company, :status => :created, :location => @company }
+        format.html { redirect_to dashboard_company_path(@company) }
+        format.xml  { render :xml => @company_location, :status => :created, :location => @company_location }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @company_location.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -75,16 +67,16 @@ class Dashboard::CompanyLocationsController < ApplicationController
   # PUT /companies/1
   # PUT /companies/1.xml
   def update
-    @company_location = @ompany.company_locations.find(params[:id])
+    @company_location = @company.company_locations.find(params[:id])
     respond_to do |format|
       if @company_location.update_attributes(params[:company_location])
-        flash[:notice] = 'Company was successfully updated.'
+        flash[:notice] = 'Company location was successfully updated.'
         format.js   { render :js => 'window.location.reload()' }
-        format.html { redirect_to(:action => "index") }
+        format.html { redirect_to dashboard_company_path(@company) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @company_location.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -93,7 +85,7 @@ class Dashboard::CompanyLocationsController < ApplicationController
   # DELETE /companies/1.xml
   def destroy
     @company_location = @company.company_locations.find(params[:id])
-    @company.destroy
+    @company_location.destroy
 
     respond_to do |format|
       format.html { redirect_to(dashboard_companies_url) }

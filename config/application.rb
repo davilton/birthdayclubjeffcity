@@ -60,6 +60,9 @@ module Birthdayclubjeffcity
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Set default date format
+    Date::DATE_FORMATS[:default] = '%m/%d/%Y'
+
     # Override Devise layouts
     config.to_prepare do
       Devise::SessionsController.layout "birthday"

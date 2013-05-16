@@ -23,7 +23,7 @@
             = birthday_deal.hook.to_s + " at " 
             %br/
             =birthday_deal.company.name
-          / %img{ src: birthday_deal.company.image_url(:coupon_image), alt: 'Logo' }
+          %img{ src: birthday_deal.company.image_url(:deal_image), alt: 'Logo' }
           .bottom-buttons
             = button_to 'Trash It', trash_birthday_deal_voucher_path(voucher), method: :put, remote: true, class: "red form-button"
             = button_to 'Keep It', keep_birthday_deal_voucher_path(voucher), method: :put, remote: true, class: "orange form-button"

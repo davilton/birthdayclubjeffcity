@@ -2,15 +2,27 @@ Birthdayclubjeffcity::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Config Mandrill 
-  # config.action_mailer.smtp_settings = {
-  #   :address   => "smtp.mandrillapp.com",
-  #   :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
-  #   :enable_starttls_auto => true, # detects and uses STARTTLS
-  #   :user_name => ENV["MANDRILL_USERNAME"],
-  #   :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
-  #   :authentication => 'login', # Mandrill supports 'plain' or 'login'
-  #   :domain => 'midmo.com', # your domain to identify your server when connecting
-  # }
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => ENV["MANDRILL_USERNAME"],
+    :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'midmo.com', # your domain to identify your server when connecting
+  }
+
+  config.action_mailer.default_url_options = { :host => 'example.com' }
+  
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
+
+  # Disable delivery errors, bad email addresses will be ignored
+    config.action_mailer.raise_delivery_errors = false
+
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -58,9 +70,6 @@ Birthdayclubjeffcity::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( dashboard.css )
-
-  # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
   # config.threadsafe!

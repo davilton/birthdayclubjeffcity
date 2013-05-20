@@ -828,6 +828,16 @@ body {
 }
 
 /* line 47, ../../app/assets/stylesheets/birthday_deals.css.scss */
+#flash_alert {
+  text-align: center;
+}
+
+/* line 48, ../../app/assets/stylesheets/birthday_deals.css.scss */
+#flash_notice {
+  text-align: center;
+}
+
+/* line 50, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box {
   display: inline-block;
   overflow: show;
@@ -841,51 +851,51 @@ body {
   transition: all 1.0s ease-in-out;
   position: relative;
 }
-/* line 60, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 63, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img {
   position: absolute;
 }
-/* line 63, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 66, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img:hover, .birthday-box img:focus {
   cursor: pointer;
 }
-/* line 66, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 69, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-1 {
   left: -8%;
 }
-/* line 69, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 72, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-2 {
   left: -30%;
 }
-/* line 72, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 75, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-3 {
   left: -17%;
 }
-/* line 75, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 78, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-4 {
   left: -35%;
 }
-/* line 78, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 81, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-5 {
   left: -64%;
 }
-/* line 81, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 84, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-6 {
   left: -7%;
 }
-/* line 84, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 87, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-7 {
   left: -21%;
 }
-/* line 87, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 90, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-8 {
   left: -31%;
 }
-/* line 90, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 93, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box img.box-9 {
   left: -10%;
 }
-/* line 97, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 100, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box:hover, .birthday-box:focus {
   cursor: pointer;
   -webkit-animation-name: spaceboots;
@@ -909,14 +919,14 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-/* line 122, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 125, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-1 {
   left: 0;
   top: 0;
   width: 173px;
   height: 153px;
 }
-/* line 128, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 131, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-2 {
   left: 0;
   top: 0;
@@ -924,14 +934,14 @@ body {
   width: 194px;
   height: 132px;
 }
-/* line 135, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 138, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-3 {
   left: -367px;
   top: 0;
   width: 138px;
   height: 142px;
 }
-/* line 141, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 144, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-4 {
   left: 0;
   top: 0;
@@ -941,7 +951,7 @@ body {
   margin-left: -40px;
   margin-right: -53px;
 }
-/* line 150, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 153, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-5 {
   background-position: -203px -155px;
   width: 221px;
@@ -949,7 +959,7 @@ body {
   margin-left: -65px;
   margin-right: -46px;
 }
-/* line 157, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 160, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-6 {
   background-position: -424px -155px;
   width: 114px;
@@ -957,7 +967,7 @@ body {
   margin-left: -2px;
   margin-right: -2px;
 }
-/* line 164, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 167, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-7 {
   background-position: 0px -299px;
   width: 173px;
@@ -965,7 +975,7 @@ body {
   margin-left: -31.5px;
   margin-right: -31.5px;
 }
-/* line 171, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 174, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-8 {
   background-position: -173px -299px;
   width: 227px;
@@ -973,7 +983,7 @@ body {
   margin-left: -58.5px;
   margin-right: -58.5px;
 }
-/* line 178, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 181, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .birthday-box.box-9 {
   background-position: -400px -299px;
   width: 140px;
@@ -982,14 +992,14 @@ body {
   margin-right: -15px;
 }
 
-/* line 186, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 189, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #box_container {
   text-align: center;
   position: fixed;
   bottom: 35px;
   width: 960px;
 }
-/* line 192, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 195, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #box_container #more-boxes {
   position: absolute;
   width: 50%;
@@ -998,7 +1008,7 @@ body {
   bottom: 35px;
 }
 
-/* line 202, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 205, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #flags-left {
   z-index: 100;
   position: fixed;
@@ -1010,7 +1020,7 @@ body {
   background: url(/assets/birthday_deals/flags-left.png) no-repeat;
 }
 
-/* line 213, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 216, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #flags-right {
   z-index: 100;
   position: fixed;
@@ -1022,7 +1032,7 @@ body {
   background: url(/assets/birthday_deals/flags-right.png) no-repeat;
 }
 
-/* line 226, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 229, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #account.white-box {
   padding: 10px;
   position: fixed;
@@ -1030,20 +1040,20 @@ body {
   top: 5px;
   z-index: 50000;
 }
-/* line 233, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 236, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #account.white-box a {
   text-decoration: none;
 }
-/* line 235, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 238, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #account.white-box a:hover {
   text-decoration: underline;
 }
-/* line 239, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 242, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #account.white-box a:visited {
   color: black;
 }
 
-/* line 245, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 248, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #logo {
   z-index: 200;
   position: absolute;
@@ -1051,7 +1061,7 @@ body {
   top: 10%;
 }
 
-/* line 251, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 254, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #instructions {
   position: absolute;
   z-index: 0;
@@ -1063,29 +1073,29 @@ body {
   background: url(/assets/birthday_deals/open-presents.png);
 }
 
-/* line 264, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 267, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #geolocation {
   text-align: center;
   padding: 10px;
 }
 
-/* line 271, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 274, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #my_birthday_deals .white-box {
   padding: 20px;
   margin: 120px 10px 10px;
 }
-/* line 274, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 277, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #my_birthday_deals .white-box h2 {
   font-size: 24px;
   padding: 0px 0px 40px;
 }
-/* line 275, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 278, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #my_birthday_deals .white-box li {
   display: inline;
   padding: 0px 5px;
 }
 
-/* line 279, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 282, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .white-box {
   background: #fff;
   -webkit-border-radius: 10px 10px;
@@ -1100,14 +1110,14 @@ body {
   -o-transition: border linear .2s, box-shadow linear .2s;
   transition: border linear .2s, box-shadow linear .2s;
 }
-/* line 297, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 300, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .white-box:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.075) 0 1px 2px inset, darkgrey 0 0 16px;
   -moz-box-shadow: rgba(0, 0, 0, 0.075) 0 1px 2px inset, darkgrey 0 0 16px;
   box-shadow: rgba(0, 0, 0, 0.075) 0 1px 2px inset, darkgrey 0 0 16px;
 }
 
-/* line 304, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 307, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details {
   display: none;
   width: 278px;
@@ -1118,32 +1128,32 @@ body {
   right: 30px;
   top: 10%;
 }
-/* line 320, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 323, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .value {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4em;
 }
-/* line 324, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 327, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .value span {
   font-size: .25em;
 }
-/* line 328, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 331, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .card-box {
   display: none;
   position: relative;
   min-height: 278px;
   font-family: Tahoma, Geneva, sans-serif;
 }
-/* line 333, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 336, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .card-box.show {
   display: block;
 }
-/* line 337, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 340, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .card-box .hook {
   margin-bottom: 5px;
   text-align: center;
 }
-/* line 341, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 344, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .card-box img {
   display: block;
   width: 150px;
@@ -1151,7 +1161,7 @@ body {
   margin: 0 auto;
   border-radius: 15px;
 }
-/* line 348, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 351, ../../app/assets/stylesheets/birthday_deals.css.scss */
 #details .card-box .value {
   font-size: 4em;
   text-align: center;
@@ -1160,30 +1170,30 @@ body {
   filter: dropshadow(color=black, offx=0, offy=0);
 }
 
-/* line 361, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 364, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .bottom-buttons {
   text-align: center;
   width: 278px;
   position: absolute;
   bottom: 5px;
 }
-/* line 369, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 372, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .bottom-buttons div {
   width: 50%;
   float: left;
 }
-/* line 373, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 376, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .bottom-buttons input {
   width: 125px;
   font-size: 1.25em;
 }
 
-/* line 379, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 382, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .big {
   width: 260px !important;
 }
 
-/* line 383, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 386, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .form-button {
   display: inline-block;
   outline: none;
@@ -1205,18 +1215,18 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* line 403, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 406, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .form-button:hover {
   text-decoration: none;
 }
 
-/* line 406, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 409, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .form-button:active {
   position: relative;
   top: 1px;
 }
 
-/* line 411, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 414, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .red {
   color: #fef4e9;
   border: solid 1px #780B06;
@@ -1227,7 +1237,7 @@ body {
   background-image: linear-gradient(#ce0000, #770000);
 }
 
-/* line 420, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 423, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .red:hover {
   background: #f47c20;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c00212), color-stop(100%, #6a010a));
@@ -1237,7 +1247,7 @@ body {
   background-image: linear-gradient(#c00212, #6a010a);
 }
 
-/* line 427, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 430, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .red:active {
   color: #fcd3a5;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #770000), color-stop(100%, #ce0000));
@@ -1247,7 +1257,7 @@ body {
   background-image: linear-gradient(#770000, #ce0000);
 }
 
-/* line 433, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 436, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .orange {
   color: #fef4e9;
   border: solid 1px #da7c0c;
@@ -1257,7 +1267,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
 }
 
-/* line 441, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 444, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .orange:hover {
   background: #f47c20;
   background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
@@ -1265,7 +1275,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
 }
 
-/* line 447, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 450, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .orange:active {
   color: #fcd3a5;
   background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
@@ -1274,311 +1284,311 @@ body {
 }
 
 @-webkit-keyframes spaceboots {
-  /* line 455, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 458, ../../app/assets/stylesheets/birthday_deals.css.scss */
   0% {
     -webkit-transform: translate(2px, 1px) rotate(0deg);
   }
 
-  /* line 456, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 459, ../../app/assets/stylesheets/birthday_deals.css.scss */
   10% {
     -webkit-transform: translate(-1px, -2px) rotate(-1deg);
   }
 
-  /* line 457, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 460, ../../app/assets/stylesheets/birthday_deals.css.scss */
   20% {
     -webkit-transform: translate(-3px, 0px) rotate(1deg);
   }
 
-  /* line 458, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 461, ../../app/assets/stylesheets/birthday_deals.css.scss */
   30% {
     -webkit-transform: translate(0px, 2px) rotate(0deg);
   }
 
-  /* line 459, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 462, ../../app/assets/stylesheets/birthday_deals.css.scss */
   40% {
     -webkit-transform: translate(1px, -1px) rotate(1deg);
   }
 
-  /* line 460, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 463, ../../app/assets/stylesheets/birthday_deals.css.scss */
   50% {
     -webkit-transform: translate(-1px, 2px) rotate(-1deg);
   }
 
-  /* line 461, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 464, ../../app/assets/stylesheets/birthday_deals.css.scss */
   60% {
     -webkit-transform: translate(-3px, 1px) rotate(0deg);
   }
 
-  /* line 462, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 465, ../../app/assets/stylesheets/birthday_deals.css.scss */
   70% {
     -webkit-transform: translate(2px, 1px) rotate(-1deg);
   }
 
-  /* line 463, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 466, ../../app/assets/stylesheets/birthday_deals.css.scss */
   80% {
     -webkit-transform: translate(-1px, -1px) rotate(1deg);
   }
 
-  /* line 464, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 467, ../../app/assets/stylesheets/birthday_deals.css.scss */
   90% {
     -webkit-transform: translate(2px, 2px) rotate(0deg);
   }
 
-  /* line 465, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 468, ../../app/assets/stylesheets/birthday_deals.css.scss */
   100% {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 
 @-moz-keyframes spaceboots {
-  /* line 468, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 471, ../../app/assets/stylesheets/birthday_deals.css.scss */
   0% {
     -moz-transform: translate(2px, 1px) rotate(0deg);
   }
 
-  /* line 469, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 472, ../../app/assets/stylesheets/birthday_deals.css.scss */
   10% {
     -moz-transform: translate(-1px, -2px) rotate(-1deg);
   }
 
-  /* line 470, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 473, ../../app/assets/stylesheets/birthday_deals.css.scss */
   20% {
     -moz-transform: translate(-3px, 0px) rotate(1deg);
   }
 
-  /* line 471, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 474, ../../app/assets/stylesheets/birthday_deals.css.scss */
   30% {
     -moz-transform: translate(0px, 2px) rotate(0deg);
   }
 
-  /* line 472, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 475, ../../app/assets/stylesheets/birthday_deals.css.scss */
   40% {
     -moz-transform: translate(1px, -1px) rotate(1deg);
   }
 
-  /* line 473, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 476, ../../app/assets/stylesheets/birthday_deals.css.scss */
   50% {
     -moz-transform: translate(-1px, 2px) rotate(-1deg);
   }
 
-  /* line 474, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 477, ../../app/assets/stylesheets/birthday_deals.css.scss */
   60% {
     -moz-transform: translate(-3px, 1px) rotate(0deg);
   }
 
-  /* line 475, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 478, ../../app/assets/stylesheets/birthday_deals.css.scss */
   70% {
     -moz-transform: translate(2px, 1px) rotate(-1deg);
   }
 
-  /* line 476, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 479, ../../app/assets/stylesheets/birthday_deals.css.scss */
   80% {
     -moz-transform: translate(-1px, -1px) rotate(1deg);
   }
 
-  /* line 477, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 480, ../../app/assets/stylesheets/birthday_deals.css.scss */
   90% {
     -moz-transform: translate(2px, 2px) rotate(0deg);
   }
 
-  /* line 478, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 481, ../../app/assets/stylesheets/birthday_deals.css.scss */
   100% {
     -moz-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 
 @-o-keyframes spaceboots {
-  /* line 481, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 484, ../../app/assets/stylesheets/birthday_deals.css.scss */
   0% {
     -o-transform: translate(2px, 1px) rotate(0deg);
   }
 
-  /* line 482, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 485, ../../app/assets/stylesheets/birthday_deals.css.scss */
   10% {
     -o-transform: translate(-1px, -2px) rotate(-1deg);
   }
 
-  /* line 483, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 486, ../../app/assets/stylesheets/birthday_deals.css.scss */
   20% {
     -o-transform: translate(-3px, 0px) rotate(1deg);
   }
 
-  /* line 484, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 487, ../../app/assets/stylesheets/birthday_deals.css.scss */
   30% {
     -o-transform: translate(0px, 2px) rotate(0deg);
   }
 
-  /* line 485, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 488, ../../app/assets/stylesheets/birthday_deals.css.scss */
   40% {
     -o-transform: translate(1px, -1px) rotate(1deg);
   }
 
-  /* line 486, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 489, ../../app/assets/stylesheets/birthday_deals.css.scss */
   50% {
     -o-transform: translate(-1px, 2px) rotate(-1deg);
   }
 
-  /* line 487, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 490, ../../app/assets/stylesheets/birthday_deals.css.scss */
   60% {
     -o-transform: translate(-3px, 1px) rotate(0deg);
   }
 
-  /* line 488, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 491, ../../app/assets/stylesheets/birthday_deals.css.scss */
   70% {
     -o-transform: translate(2px, 1px) rotate(-1deg);
   }
 
-  /* line 489, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 492, ../../app/assets/stylesheets/birthday_deals.css.scss */
   80% {
     -o-transform: translate(-1px, -1px) rotate(1deg);
   }
 
-  /* line 490, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 493, ../../app/assets/stylesheets/birthday_deals.css.scss */
   90% {
     -o-transform: translate(2px, 2px) rotate(0deg);
   }
 
-  /* line 491, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 494, ../../app/assets/stylesheets/birthday_deals.css.scss */
   100% {
     -o-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 
 @keyframes spaceboots {
-  /* line 494, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 497, ../../app/assets/stylesheets/birthday_deals.css.scss */
   0% {
     transform: translate(2px, 1px) rotate(0deg);
   }
 
-  /* line 495, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 498, ../../app/assets/stylesheets/birthday_deals.css.scss */
   10% {
     transform: translate(-1px, -2px) rotate(-1deg);
   }
 
-  /* line 496, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 499, ../../app/assets/stylesheets/birthday_deals.css.scss */
   20% {
     transform: translate(-3px, 0px) rotate(1deg);
   }
 
-  /* line 497, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 500, ../../app/assets/stylesheets/birthday_deals.css.scss */
   30% {
     transform: translate(0px, 2px) rotate(0deg);
   }
 
-  /* line 498, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 501, ../../app/assets/stylesheets/birthday_deals.css.scss */
   40% {
     transform: translate(1px, -1px) rotate(1deg);
   }
 
-  /* line 499, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 502, ../../app/assets/stylesheets/birthday_deals.css.scss */
   50% {
     transform: translate(-1px, 2px) rotate(-1deg);
   }
 
-  /* line 500, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 503, ../../app/assets/stylesheets/birthday_deals.css.scss */
   60% {
     transform: translate(-3px, 1px) rotate(0deg);
   }
 
-  /* line 501, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 504, ../../app/assets/stylesheets/birthday_deals.css.scss */
   70% {
     transform: translate(2px, 1px) rotate(-1deg);
   }
 
-  /* line 502, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 505, ../../app/assets/stylesheets/birthday_deals.css.scss */
   80% {
     transform: translate(-1px, -1px) rotate(1deg);
   }
 
-  /* line 503, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 506, ../../app/assets/stylesheets/birthday_deals.css.scss */
   90% {
     transform: translate(2px, 2px) rotate(0deg);
   }
 
-  /* line 504, ../../app/assets/stylesheets/birthday_deals.css.scss */
+  /* line 507, ../../app/assets/stylesheets/birthday_deals.css.scss */
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 
-/* line 512, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 515, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .center {
   margin: auto;
 }
 
-/* line 514, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 517, ../../app/assets/stylesheets/birthday_deals.css.scss */
 table {
   width: 750px;
   margin: auto;
 }
-/* line 517, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 520, ../../app/assets/stylesheets/birthday_deals.css.scss */
 table .colored_row {
   background: #eee;
 }
-/* line 518, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 521, ../../app/assets/stylesheets/birthday_deals.css.scss */
 table .blank_row {
   background: #fff;
 }
-/* line 519, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 522, ../../app/assets/stylesheets/birthday_deals.css.scss */
 table th {
   font-weight: bold;
 }
 
-/* line 523, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 526, ../../app/assets/stylesheets/birthday_deals.css.scss */
 td, th {
   padding: 5px 10px;
 }
 
-/* line 527, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 530, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell {
   height: 100%;
 }
-/* line 530, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 533, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell .floater {
   position: relative;
   height: 50%;
   width: 1px;
 }
-/* line 536, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 539, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .floater {
   margin-bottom: -157px;
 }
-/* line 541, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 544, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signup .floater {
   margin-bottom: -330px;
 }
-/* line 545, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 548, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signup img {
   margin-top: 100px;
 }
-/* line 550, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 553, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_birthday .floater {
   margin-bottom: -157px;
 }
-/* line 553, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 556, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_birthday img {
   margin-top: -30px;
 }
-/* line 557, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 560, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_birthday .bottom_tag {
   margin-top: 80px;
   clear: both;
 }
-/* line 563, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 566, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#all_opened .floater {
   margin-bottom: -157px;
 }
-/* line 567, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 570, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#all_opened .white-box {
   padding: 10px;
   width: 300px;
   height: 300px;
 }
-/* line 574, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 577, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#video .floater {
   margin-bottom: -205px;
 }
-/* line 577, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 580, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#video .white-box {
   position: relative;
   margin: 0 auto;
@@ -1586,58 +1596,58 @@ td, th {
   width: 640px;
   padding: 25px;
 }
-/* line 584, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 587, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#video .bottom_tag {
   text-align: center;
   margin-top: 80px;
   clear: both;
 }
-/* line 592, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 595, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin, .cell#customer_signup, .cell#customer_birthday, .cell#all_opened {
   position: relative;
   text-align: center;
   width: 800px;
   margin: 0 auto;
 }
-/* line 599, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 602, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .dob, .cell#customer_signup .dob, .cell#customer_birthday .dob, .cell#all_opened .dob {
   position: relative;
   text-align: left;
 }
-/* line 602, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 605, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .dob .month, .cell#customer_signup .dob .month, .cell#customer_birthday .dob .month, .cell#all_opened .dob .month {
   width: 2em !important;
   margin-right: .85em;
 }
-/* line 606, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 609, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .dob .day, .cell#customer_signup .dob .day, .cell#customer_birthday .dob .day, .cell#all_opened .dob .day {
   width: 2em !important;
   margin-right: .85em;
 }
-/* line 610, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 613, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .dob .year, .cell#customer_signup .dob .year, .cell#customer_birthday .dob .year, .cell#all_opened .dob .year {
   width: 4em !important;
 }
-/* line 614, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 617, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .left, .cell#customer_signup .left, .cell#customer_birthday .left, .cell#all_opened .left {
   float: left;
   width: 300px;
   margin: 0 50px;
 }
-/* line 619, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 622, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .right, .cell#customer_signup .right, .cell#customer_birthday .right, .cell#all_opened .right {
   width: 300px;
   margin: 0 50px 0 450px;
 }
-/* line 623, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 626, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin img, .cell#customer_signup img, .cell#customer_birthday img, .cell#all_opened img {
   padding: 10px;
 }
-/* line 626, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 629, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form, .cell#customer_signup .form, .cell#customer_birthday .form, .cell#all_opened .form {
   width: 300px;
 }
-/* line 628, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 631, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form input[type='text'], .cell#customer_signin .form input[type='password'], .cell#customer_signin .form input[type='email'], .cell#customer_signin .form input[type='date'], .cell#customer_signup .form input[type='text'], .cell#customer_signup .form input[type='password'], .cell#customer_signup .form input[type='email'], .cell#customer_signup .form input[type='date'], .cell#customer_birthday .form input[type='text'], .cell#customer_birthday .form input[type='password'], .cell#customer_birthday .form input[type='email'], .cell#customer_birthday .form input[type='date'], .cell#all_opened .form input[type='text'], .cell#all_opened .form input[type='password'], .cell#all_opened .form input[type='email'], .cell#all_opened .form input[type='date'] {
   height: 19px;
   padding: 3px 3px;
@@ -1648,28 +1658,28 @@ td, th {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 635, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 638, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form #customer_optin_daily_email, .cell#customer_signup .form #customer_optin_daily_email, .cell#customer_birthday .form #customer_optin_daily_email, .cell#all_opened .form #customer_optin_daily_email {
   width: auto;
 }
-/* line 639, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 642, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs, .cell#customer_signup .form .inputs, .cell#customer_birthday .form .inputs, .cell#all_opened .form .inputs {
   text-align: center;
 }
-/* line 640, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 643, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs legend, .cell#customer_signup .form .inputs legend, .cell#customer_birthday .form .inputs legend, .cell#all_opened .form .inputs legend {
   margin: 0 0 25px 0;
 }
-/* line 643, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 646, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs p.inline-hints, .cell#customer_signup .form .inputs p.inline-hints, .cell#customer_birthday .form .inputs p.inline-hints, .cell#all_opened .form .inputs p.inline-hints {
   text-align: left;
 }
-/* line 647, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 650, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs li, .cell#customer_signup .form .inputs li, .cell#customer_birthday .form .inputs li, .cell#all_opened .form .inputs li {
   width: 270px;
   margin: 20px 10px;
 }
-/* line 652, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 655, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs input, .cell#customer_signup .form .inputs input, .cell#customer_birthday .form .inputs input, .cell#all_opened .form .inputs input {
   display: inline-block;
   width: 250px;
@@ -1685,14 +1695,14 @@ td, th {
   transition: all, 0.2s, ease-in-out, 0;
   position: relative;
 }
-/* line 661, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 664, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs input:hover, .cell#customer_signup .form .inputs input:hover, .cell#customer_birthday .form .inputs input:hover, .cell#all_opened .form .inputs input:hover {
   outline: none;
   -webkit-box-shadow: darkgrey 1px 1px 10px inset;
   -moz-box-shadow: darkgrey 1px 1px 10px inset;
   box-shadow: darkgrey 1px 1px 10px inset;
 }
-/* line 665, ../../app/assets/stylesheets/birthday_deals.css.scss */
+/* line 668, ../../app/assets/stylesheets/birthday_deals.css.scss */
 .cell#customer_signin .form .inputs input:focus, .cell#customer_signup .form .inputs input:focus, .cell#customer_birthday .form .inputs input:focus, .cell#all_opened .form .inputs input:focus {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

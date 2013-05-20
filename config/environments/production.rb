@@ -9,7 +9,7 @@ Birthdayclubjeffcity::Application.configure do
     :user_name => ENV["MANDRILL_USERNAME"],
     :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'midmo.com', # your domain to identify your server when connecting
+    :domain => 'heroku.com', # your domain to identify your server when connecting
   }
 
   config.action_mailer.default_url_options = { :host => 'example.com' }
@@ -21,7 +21,7 @@ Birthdayclubjeffcity::Application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   # Disable delivery errors, bad email addresses will be ignored
-    config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
 
   # Code is not reloaded between requests
@@ -38,7 +38,9 @@ Birthdayclubjeffcity::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  # Set to true for Heroku, not ideal for production
+  config.assets.compile = true
+  # config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true

@@ -1,18 +1,21 @@
 Birthdayclubjeffcity::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Set default url host
+  routes.default_url_options[:host] = 'birthdayclubjeffcity.herokuapp.com'
+
   # Config Mandrill 
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :user_name => ENV["MANDRILL_USERNAME"],
-    :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
+    :password  => ENV["MANDRILL_APIKEY"], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => 'heroku.com', # your domain to identify your server when connecting
   }
 
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  config.action_mailer.default_url_options = { :host => 'birthdayclubjeffcity.herokuapp.com' }
   
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
@@ -38,7 +41,7 @@ Birthdayclubjeffcity::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  # Set to true for Heroku, not ideal for production
+  # Set to true for Heroku, normally false. Not ideal for production
   config.assets.compile = true
   # config.assets.compile = false
 

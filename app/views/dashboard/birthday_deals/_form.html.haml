@@ -15,11 +15,11 @@
   = f.input :how_to_redeem, as: :text, input_html: { rows: 2, size: 100}, hint: "This already displays on all vouchers: 'Merchant will check ID upon redemption.  Photo ID showing required to validate birthday.'   DO NOT ADD the text in this quote"
 
 = f.inputs 'Run time' do
-  = f.input :start_date, as: :string, data: { behaviour: 'datepicker' }, input_html: {class: "format-m-d-y highlight-days-67 no-transparency", size: 10}
-  = f.input :end_date, as: :string, input_html: { readonly: true, size: 10 }
+  = f.input :start_date #, as: :string, data: { behaviour: 'datepicker' }, input_html: {class: "format-m-d-y highlight-days-67 no-transparency", size: 10}
+  = f.input :end_date #, as: :string, input_html: { readonly: true, size: 10 }
 
 = f.actions do
-  = f.submit
+  = f.action :submit
 
 
 

@@ -1,6 +1,7 @@
 class Dashboard::UsersController < ApplicationController
   before_filter :admin_login_required
-  
+  before_filter :get_vouchers, only: [:show]
+
   layout 'dashboard'
 
   # GET /users
@@ -90,4 +91,10 @@ class Dashboard::UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def get_vouchers
+    @user = User.find(params[:id])
+    @birthday_vouchers = BirthdayDealVoucher.where('user_id = ?', @user)
+  end  
 end

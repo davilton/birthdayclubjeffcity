@@ -29,6 +29,10 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def short_birthdate
+    self.birthdate.strftime('%m/%d')
+  end
+
   def birthday
     bday = self.test_user? ? Date.today : self.birthdate
     bday.strftime('%B %d')

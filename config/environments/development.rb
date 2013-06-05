@@ -1,6 +1,10 @@
 Birthdayclubjeffcity::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Workless scaler for Delayed Job
+  config.after_initialize do
+    Delayed::Job.scaler = :local
+  end  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -44,3 +48,8 @@ Birthdayclubjeffcity::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+MC_LIST_ID = ENV['MC_LIST_ID']
+MC_APIKEY = ENV['MC_APIKEY']
+MANDRILL_USERNAME = ENV['MANDRILL_USERNAME']
+MANDRILL_APIKEY = ENV['MANDRILL_APIKEY']

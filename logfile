@@ -221,3 +221,18 @@ STATEMENT:  select * from users where;
 ERROR:  syntax error at or near "?" at character 29
 STATEMENT:  select * from birthday_deals?
 	select * from birthday_deals;
+LOG:  database system was shut down at 2013-05-31 09:33:47 CDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  database system was interrupted; last known up at 2013-05-31 11:38:20 CDT
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/1BFC350
+LOG:  redo is not required
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  database system was interrupted; last known up at 2013-06-04 14:47:56 CDT
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/1C2D5D0
+LOG:  redo is not required
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

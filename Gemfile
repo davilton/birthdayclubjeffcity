@@ -40,6 +40,11 @@ gem 'jquery-qtip2-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'compass'
 gem 'compass-rails'
+gem 'mailchimp'
+gem 'delayed_job_active_record'
+gem 'daemons'
+gem 'workless', '~> 1.1.1'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

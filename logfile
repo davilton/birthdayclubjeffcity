@@ -236,3 +236,13 @@ LOG:  record with zero length at 0/1C2D5D0
 LOG:  redo is not required
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+FATAL:  database "birthdayclubjeffcity_production" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-06-05 10:21:27 CDT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "birthdayclubjeffcity_production" does not exist

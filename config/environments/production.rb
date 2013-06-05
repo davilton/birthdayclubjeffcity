@@ -14,8 +14,8 @@ Birthdayclubjeffcity::Application.configure do
     :address   => "smtp.mandrillapp.com",
     :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => MANDRILL_USERNAME,
-    :password  => MANDRILL_APIKEY, # SMTP password is any valid API key
+    :user_name => ENV['MANDRILL_USERNAME'],
+    :password  => ENV['MANDRILL_APIKEY'], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => 'heroku.com', # your domain to identify your server when connecting
   }
@@ -96,7 +96,7 @@ Birthdayclubjeffcity::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
 
-MC_LIST_ID = env['MC_LIST_ID']
-MC_APIKEY = env['MC_APIKEY']
-MANDRILL_USERNAME = env['MANDRILL_USERNAME']
-MANDRILL_APIKEY = env['MANDRILL_APIKEY']
+MC_LIST_ID = ENV['MC_LIST_ID']
+MC_APIKEY = ENV['MC_APIKEY']
+MANDRILL_USERNAME = ENV['MANDRILL_USERNAME']
+MANDRILL_APIKEY = ENV['MANDRILL_APIKEY']
